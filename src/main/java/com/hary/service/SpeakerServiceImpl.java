@@ -7,9 +7,10 @@ import java.util.List;
 
 public class SpeakerServiceImpl implements SpeakerService {
 
-//    public SpeakerServiceImpl(SpeakerRepository repository) {
-//        this.repository = repository;
-//    }
+    public SpeakerServiceImpl(SpeakerRepository repository) {
+        System.out.println("repository constructor");
+        this.repository = repository;
+    }
 
     public void setSpeakerRepository(SpeakerRepository repository) {
         this.repository = repository;
