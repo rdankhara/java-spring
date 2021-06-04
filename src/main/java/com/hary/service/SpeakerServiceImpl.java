@@ -1,14 +1,21 @@
 package com.hary.service;
 
 import com.hary.model.Speaker;
-import com.hary.repository.HibernateSpeakerRepositoryImpl;
 import com.hary.repository.SpeakerRepository;
 
 import java.util.List;
 
 public class SpeakerServiceImpl implements SpeakerService {
 
-    private SpeakerRepository repository = new HibernateSpeakerRepositoryImpl();
+    public void setRepository(SpeakerRepository repository) {
+        this.repository = repository;
+    }
+
+    private SpeakerRepository repository;
+
+    public SpeakerServiceImpl() {
+        System.out.println("instance created");
+    }
 
     @Override
     public List<Speaker> findAll() {
