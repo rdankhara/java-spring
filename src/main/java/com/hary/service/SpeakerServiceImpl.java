@@ -15,7 +15,6 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     public SpeakerServiceImpl(SpeakerRepository speakerRepository) {
         this.repository = speakerRepository;
-        System.out.println("instance created");
     }
 
     @Override
