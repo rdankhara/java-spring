@@ -7,13 +7,14 @@ import java.util.List;
 
 public class SpeakerServiceImpl implements SpeakerService {
 
-    public void setRepository(SpeakerRepository repository) {
-        this.repository = repository;
-    }
+//    public void setRepository(SpeakerRepository repository) {
+//        this.repository = repository;
+//    }
 
     private SpeakerRepository repository;
 
-    public SpeakerServiceImpl() {
+    public SpeakerServiceImpl(SpeakerRepository speakerRepository) {
+        this.repository = speakerRepository;
         System.out.println("instance created");
     }
 
